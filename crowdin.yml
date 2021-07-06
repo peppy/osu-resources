@@ -2,6 +2,9 @@ preserve_hierarchy: true
 files:
   - source: /osu.Game.Resources/Localisation/*.resx
     translation: /osu.Game.Resources/Localisation/%file_name%.%locale%.%file_extension%
+    ignore:
+      # note that this should probably be using %locale% but it doesn't seem to respect out mapping below.
+      - /osu.Game.Resources/Localisation/%file_name%.%two_letters_code%.%file_extension%
     update_option: update_as_unapproved
     languages_mapping:
       locale:
